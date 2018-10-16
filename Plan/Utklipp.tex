@@ -1,0 +1,65 @@
+ EKSPERIMENT
+ 
+ Den totale energien til stålkulen er lik summen av den potensielle energien og den kinetiske energien. Summen av den potensielle energien og den kinetiske energien vil være bevart til en hver tid utfra Newtons lov om bevaring av energi. Vi ser på $E_{tot}$ i punkt 1 og 2.
+\begin{equation}
+E = mgh+ \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2
+\end{equation}
+
+\begin{equation}
+E_{p1} + E_{k1} = E_{p2} + E_{k2}
+\label{eq:Newtons Energibevaringslov} 
+\end{equation}
+
+Den kinetiske energien til stålkulen består bade av translasjonsenergi og rotasjonsenergi. En fulstendig beskrivelse av newtons beevaringslov vil derfor bli slik.
+\begin{equation}
+mgh_{1} + \frac{1}{2}mv_{1}^2 + \frac{1}{2}I\omega_{1}^2  = mgh_{2} + \frac{1}{2}mv_{2}^2 + \frac{1}{2}I\omega_{2}^2
+\label{eq:Newtons Energibevaringslov} 
+\end{equation}
+Hvor m er objektets masse. g er tyngdeakselerasjonen. h er objektets høyde over nullpunktet i referansesystemet. v er objektets fart. w er kulens vinkelhastighet. I er treghetsmomentet. For en massiv kule vil treghetsmomentet være gitt ved $I = \frac{2}{3}MR^2$. \\
+Denne energiloven forteller oss at energien i et system skal være konstant. I dette tilfellet forteller loven at potensiell energi, fra objektets høyde over bakken, kan forandres til bevegelsesenergi. Denne loven tar utgangspunkt i null rullefriksjon og null luftmotstand. \\
+
+
+\begin{equation}
+E_{tot_1} = E_{tot_2} + \Delta E
+\end{equation}
+Der $\Delta E$ vil bestå av friksjonskrefter i form av luftmotstand og rullefriksjon.
+
+
+
+For m er massen til objektet og $\vec{a}$ er objektets akselerasjonen. Denne likningen gir utgangspunktet for differensiallikningen vår
+
+
+USIKKERHET\\
+Vi måler størrelsene masse og høyde. Disse har en nøyaktighet avhengig av utstyret de blir målt med.\\ 
+Massen til kula\\
+Vekten vi bruker er fra Ohaus, Model CS 5000 (http://dmx.ohaus.com/WorkArea/showcontent.aspx?id=7002). På nettsiden til Ohaus er feilen oppgitt til$\pm$ 1g.\\
+Diameteren til kula\\
+Bruker linjal og rekner med en feil på $\pm$ 1mm\\
+Høyde\\
+Vi bruker meterstokk til å måle høyden. Da blir unøyaktigheten i høyden i mm, og vi estimerer den til 5mm for å være sikker på at vi er innafor.\\
+Fart\\
+Vi rekner ikke ut farten, men bruker Tracker sitt posisjonsuttrykk til å finne farten. Ukjent nøyaktighet. Kan bruke energien i toppunktene på hver side til kontroll av farten i forhold til energibevaringsloven; eller i vårt tilfelle blir det $E_{p1} > E_k > E_{p2}$          %Kva er unøyaktigheten i dette tilfellet \\  
+Energi er en størrelse som vi ikke kan måle direkte. Vi får et uttrykk som består av flere verdier som inneholder en usikkerhet. Her bruker vi gauss-feilforplantningslov.\\
+Gauss for måling av potensiell energi; vi har unøyaktighet i høyde, masse, og i gravitasjonskonstanten: $$\delta E_p =  \abs{E_p} \sqrt{(\frac{\delta h}{h})^2+(\frac{\delta m}{m})^2 + (\frac{\delta g}{g})^2}$$ 
+Her kan vi anta at $\delta g$ er så liten at den ikke trenger være med.\\ 
+Gauss for måling av kinetisk energi; unøyaktighet i masse og i fart  $$\delta E_k =  \abs{E_k} \sqrt{2(\frac{\delta v}{v})^2+(\frac{\delta m}{m})^2}$$  
+
+\subsection{Definisjonsusikkerhet}
+Hva som er høyden, i nullpunktet og generelt. I vårt tilfelle bruker vi det punktet på banen hvor kula befinner seg.\\
+
+\subsection{Tilfeldig feil}
+
+Når vi slipper objektet: $\Delta h$ - forskjell i høyden i forhold til det vi har målt. Dette gjelder også underveis i målingen, at vi ikke vil klare å få en nøyaktig måling av høyden.$v_{0}$ - blir antatt å være lik 0. Begge disse vil ha omtrent samme effekt, og vi kan la dette være et tillegg i usikkerheten i høydemålingen\\
+
+
+I vårt tilfelle skal vi måle lengden på differansen på banen til stålkulen. Denne målingen skal vi gjøre, og vi kan bruke disse formlene til å regne ut standardavviket i målingen vår.
+
+Krummingen $K = \frac{1}{R}$. Radien kan skrives som $r = \frac{l^2 + h^2}{2h}$, der l er distansen i x-retning fra banens laveste punkt til et annet punkt, og h er distansen i y-retning. Krummningen blir da: $\frac{2h}{l^2+h^2} $ Bruker gauss feil-forplantningslov til å finne usikkerheten i krummningen.\\
+$$\delta K = \sqrt{(\frac{\partial K}{\partial l}*\delta l)^2+ (\frac{\partial K}{\partial h}*\delta h)^2}$$ = $$\sqrt{(-\frac{2*h*l}{(h^2+l^2)^2}*\delta l)^2+ (\frac{2(l^2-h^2)}{(l^2+h^2)^2})*\delta h)^2}$$
+
+Vi kan måle l og h ganske nøyaktig med tanke på at disse er faste punkt som ikke trenger å endres på underveis. Kan rekne med en maks usikkerhet i disse på 2mm.\\
+
+Eksperimentet oppsett består av en bane med konstant krumning. Selve eksperimentet vil gå ut på å slippe stålkulen fra en bestemt posisjon i banen og observere posisjonen til stålkulen med hensyn på tiden. Vi benytter oss av et høyhastighetskamera for å kunne analysere dataene.\\
+
+
+\item Sette opp rullebanen i U-form med konstant krumning. Ikke for bratt bane. Bruker snor, og pendelbevegelse, for å lage banen til en slak sirkel. Vi merker av et startpunkt hvor vi skal slippe stålkulen fra.

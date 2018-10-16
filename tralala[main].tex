@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {Bilde/} }
+
+\title{Fysikk lab - H2017 - logg}
+\author{Mats - Peter - Andreas - Thomas}
+\date{August 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Logg - Dag 1}
+\subsection{Kamera}
+Kamerainnstillinger: FF 100fps, eksponering = 0\\
+\vspace{10mm}
+\subsection{Tracker}
+\includegraphics[scale=0.1]{Oppsett}\\
+Oppsett til oppgave 1. Rulling av sylinder på skråplan.\\
+Parabel for akselerasjon: $5.044*10^{-1}t^2-3.216*10^{-2}t+8.117$ (Oppg. 19)\\
+\vspace{2mm}
+\subsection{Rulling med energibevarelse}
+10 sett med rulling. Tracker er brukt til å finne en parabel som beskriver posisjonen til sylinderen best mulig, som beskrevet i oppgaveteksten\\
+\begin{center}
+
+ \begin{tabular}{|c c c c|} 
+\hline
+ Forsøk & Posisjon & Estimat tyngdekraft($m/s^2)$ & Akselerasjon-ting\\ [1.5ex] 
+ 1 & $4.797*10^{-1}t^2+ 8.345*10^{-2}t+7.556*10^{-2}$ & 7.56 & $0.9594$\\ 
+ 2 & $4.695*10^{-1}t^2-6.463*10^{-2}t+7.317*10^{-2}$ & 7.41 & $0.939$\\
+ 3 & $5.052*10^{-1}t^2 -3.281*10^{-2} t + 8.125*10^{-2}$ & 7.97 & $1.01$\\
+ 4 & $5.040*10^{-1}t^2-3.197*10^{-2}t + 8.117*10^{-2}$ & 7.95 & $1.008$\\
+ 5 & $5.044*10^{-1}t^2 -3.216*10^{-2}t + 8.117*10^{-2}$ & 7.96 & $1.009$\\
+ 6 & $5.050*10^{-1}t^2 -3.266*10^{-2}t + 8.124*10^{-2}$ & 7.97 & $1.01$\\
+ 7 & $5.051 *10^{-1}t^2 -3.271 *10^{-2}t + 8.124*10^{-2}$ & 7.97 & $1.01$\\
+ 8 & $4.663*10^{-1}t^2 +2.129*10^{-1}t + 7.316*10^{-2}$ & 7.36 & $0.933$\\
+ 9 & $4.815 *10^{-1}t^2 +1.614 *10^{-1}t + 6.259*10^{-2}$ & 7.60 & $0.963$\\
+ 10 & $4.980 *10^{-1}t^2 +1.305 *10^{-1}t + 6.338*10^{-2}$ & 7.86 & $0.996$\\[1ex]
+ \hline
+\end{tabular}
+\end{center}
+
+Estimat for tyngdekraft, \emph{g}, er gitt ved $\frac{2a}{sin \alpha} $
+
+\vspace{10mm}
+\subsection{Usikkerhetsanalyse}
+\textbf{Ulike målinger og utrekninger}\\
+Gjennomsnitt akselerasjon: 0,98374\\
+Avrundet til 3 siffer 0,983\\
+Standard avvik: 0.00317\\
+Standard feil: 0.01\\
+Prosentvis usikkerhet: $3.2\%$ , standardavvik*100/gj.akselerasjon\\
+\vspace{2mm}\\
+\textbf{Tyngde}
+Usikkerhet (Gauss): \\
+Prosentvis usikkerhet:\\ 
+\vspace{2mm}\\
+\textbf{Vinkel:}\\
+KatetH: $74cm \pm 0.5cm$\\
+Hypotenus: $76.5cm \pm 0.5cm$\\ 
+Standard avvik vinkel: $\pm 0.036$\\
+
+Oppave 20\\
+Ja, målingene av akselerasjonen til ringen i oppg 19 ligger innenfor gjennomsnittlig standard avvik.
+Akselerasjonen i oppg 19 var 1,01$m/s^2$. 
+Gjennomsnittlig akselerasjon er 0,984. Standardavviket er 0,0312 og derfor ligger den innenfor. \\
+\vspace{5mm}\\
+\textbf{Feilkilder:}\\
+Luftmotstand\\
+Friksjon mot underlag\\
+Approksimasjon av posisjonsbanen\\
+Vinkelmål\\
+\vspace{3mm}\\
+\textbf{Formler:}\\
+Usikkerhet i vinkel:\\
+Fra: $\alpha = arccos(b/c)$
+får vi: $\delta\alpha = \frac{1}{c}\sqrt{\frac{(c\delta b)^2+(b\delta c)^2}{c^2-b^2}}$\\
+Usikkerhet i tyngdekraft:\\
+Fra: $\frac{\delta g}{\delta a} = \frac{2}{sin \alpha}$
+får vi: 
+
+
+
+
+
+\end{document}
+

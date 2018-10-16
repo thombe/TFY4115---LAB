@@ -1,0 +1,80 @@
+clear;
+
+meter  = false; 
+
+% Fysiske konstanter
+g = 9.81;
+mu = 0.0025;
+M = 0.032;
+r = 0.01;
+I = 2/5*M*r*r;
+K = g/(1+I/(M*r*r));
+PI = 3.141592653589793;
+
+
+% Initialverdier
+if (meter)
+    init_pos_x = -53.053296851804646; %I meter
+    intit_pos_y = 7.414601382212538; % I meter
+    %p=iptrack('mass_A_FiksetTilMeter.txt');
+    p = iptrack('mass_A_fiksetForAndreGang.txt');
+    %p=iptrack('mass_A.txt');
+else %
+    init_pos_x = -0.549054427402697*100; %I cm
+    intit_pos_y = 0.05875616472491324*100; % I cm
+    p=iptrack('mass_A.txt');
+    
+    %p=iptrack('mass_A._CENTI.txt');
+    r = 1; 
+    g = 981; 
+end
+
+p(16) = 0;
+
+disp(p)
+values = trvalues(p,init_pos_x);
+
+disp(values(4)*180/PI)
+
+init_vel = 0;
+x=init_pos_x;
+%s=init_pos_x; 
+init_alpha = values(4);
+init_alpha_deg = 180/PI * init_alpha; 
+v = init_vel;
+v_x = init_vel*cos(init_alpha);
+alpha = init_alpha; 
+
+% Tidskonstanter
+delta_t = 0.1;
+simulation_time = 500; 
+t = 0:delta_t:simulation_time;
+
+for n=1:(length(t)-1)
+    values = trvalues(p,x(n));
+    alpha = values(4);
+    %disp(alpha*180/PI);
+    l = 1;
+    if(v(n)<0)
+        l = -1;
+    end
+    dv= K*(sin(alpha)-mu*cos(alpha)*l);
+    %dv = values(2);
+    %disp(dv);
+    v(n+1)=v(n)+delta_t*(dv);
+    %disp(v(n));
+    v_x(n) = v(n)*cos(alpha);
+    x(n+1) = x(n) + delta_t*v_x(n);
+    
+    
+end
+
+%disp(p);
+%sx = -50:0.01:50;
+%sy = p(14).*sx.*sx + p(15).*sx + p(16);
+% plot(sx, sy);
+plot(t,x)
+hold on
+plot(t,v)
+hold off 
+
